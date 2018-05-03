@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <title>Laboratório Fotônica</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" >
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-2.1.3.js" ></script>
+
+    </head>
+    <body>
+    <script type="text/javascript">
+        document.documentElement.className += ' js';
+    </script>
+
+
+    <style>
+
+
+        h2{
+            text-align: center;
+        }
+        .figure-img{
+            width: 120px;
+            height: 120px;
+            border:solid 1px black;
+            border-radius: 80px;
+        }
+        figcaption img{
+            width: 20px;
+            height: 25px;
+        }
+        figcaption a{
+            color: #1e2c67;
+        }
+        .tab-avatars{
+            padding: 10px;
+        }
+    </style>
+
+
+    <!--  Modal Doutores -->
+
+
+    <div class="modal fade" id="modalDoutores" tabindex="-1" role="dialog" aria-labelledby="modalDoutoresTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDoutoresTitulo">Doutores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/agliberto.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/7235164595002832" target="_blank"><img src="img/lattes.jpg" alt=""> Agliberto Melo</a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/alisson.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/7494552210546037" target="_blank"><img src="img/lattes.jpg" alt="">Alisson da Conceição </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/auzuir.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/2784997614182231" target="_blank"><img src="img/lattes.jpg" alt="">Auzuir Ripardo </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/fabio.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/7924150984432516" target="_blank"><img src="img/lattes.jpg" alt="">Fabio Alencar</a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/glendo.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/7107196337237668" target="_blank"><img src="img/lattes.jpg" alt="">Glendo de Freitas </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/wally.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/1278089649826222" target="_blank"><img src="img/lattes.jpg" alt="">Jose Wally </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/marcos.erick.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/7579764751648280" target="_blank"><img src="img/lattes.jpg" alt="">Marcos Erick </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/wilton.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/5177248737670561" target="_blank"><img src="img/lattes.jpg" alt="">Wilton Bezerra </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/erandir.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/0734551494781031" target="_blank"><img src="img/lattes.jpg" alt="">Erandir Brasil</a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Fecha Modal Doutores -->
+
+    <!--  Modal Doutorandos -->
+
+    <div class="modal fade" id="modalDoutorandos" tabindex="-1" role="dialog" aria-labelledby="modalDoutorandosTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDoutorandosTitulo">Doutorandos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/tadeu.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/0753830424727819" target="_blank"><img src="img/lattes.jpg" alt=""> Francisco Tadeu </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/danilo.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/4701339086630291" target="_blank"><img src="img/lattes.jpg" alt=""> Danilo Sousa Rocha</a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/dayse.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/4273211514705417" target="_blank"><img src="img/lattes.jpg" alt=""> Dayse Gonçalves</a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/juscelino.jpg" class="figure-img img-fluid ">
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/1845293985076098" target="_blank"><img src="img/lattes.jpg" alt=""> Juscelino Chaves </a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Doutorandos -->
+
+    <!--  Modal Mestres -->
+
+    <div class="modal fade" id="modalMestres" tabindex="-1" role="dialog" aria-labelledby="modalMestresTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMestresTitulo">Mestres</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/daniel.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/1063188090750480" target="_blank"><img src="{{asset("img/lattes.jpg")}}" alt=""> Daniel do Nascimento </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/lucas.moura.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/2077170913438415" target="_blank"><img src="img/lattes.jpg" alt=""> Lucas Pinheiro </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/PV.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/3245085934745106" target="_blank"><img src="img/lattes.jpg" alt=""> Paulo Victor </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/kaio.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/0024101603201877" target="_blank"><img src="img/lattes.jpg" alt=""> Kaio Jônathas  </a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Mestres -->
+
+    <!--  Modal Mestrandos -->
+
+    <div class="modal fade" id="modalMestrandos" tabindex="-1" role="dialog" aria-labelledby="modalMestrandosTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMestrandosTitulo">Mestrandos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/clenilson.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/3860894232902462" target="_blank"><img src="img/lattes.jpg" alt=""> Francisco Clenilson </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/george.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9523969442400405" target="_blank"><img src="img/lattes.jpg" alt=""> George Sales </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/guilherme.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9024716736196353" target="_blank"><img src="img/lattes.jpg" alt=""> Guilherme Matias  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/isaac.miranda.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/4948153596642976" target="_blank"><img src="img/lattes.jpg" alt=""> Isaac  Miranda </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/kelvia.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/4032714877421680" target="_blank"><img src="img/lattes.jpg" alt=""> Kelvia Fragoso </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/sampaio.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9565312116953435" target="_blank"><img src="img/lattes.jpg" alt=""> Robson Sampaio </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/artur.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/5663234634143811" target="_blank"><img src="img/lattes.jpg" alt=""> Artur Evangelista </a></figcaption>
+                            </figure>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Mestrandos -->
+
+    <!--  Modal Graduando -->
+
+    <div class="modal fade" id="modalGraduandos" tabindex="-1" role="dialog" aria-labelledby="modalGraduandosTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGraduandosTitulo">Graduandos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/saul.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/2223854097273105" target="_blank"><img src="img/lattes.jpg" alt=""> Saul Carvalho  </a></figcaption>
+                                <figcaption class="figure-caption">Graduado</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/jhonson.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/5698291259638012" target="_blank"><img src="img/lattes.jpg" alt="">Lindonjohnson Peixoto </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/teo.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/4490162428350376" target="_blank"><img src="img/lattes.jpg" alt="">Teodoro Oliveira  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/glayd.jpg" class="figure-img img-fluid " >
+                            <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/3413195154318246" target="_blank"><img src="img/lattes.jpg" alt="">Glaydiane Mesquita  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/waleska.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9395015945899372" target="_blank"><img src="img/lattes.jpg" alt=""> Waleska Feitosa </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/raiane.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9601656716641370" target="_blank"><img src="img/lattes.jpg" alt=""> Raiane Rocha </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/beatriz.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/2351922984418068" target="_blank"><img src="img/lattes.jpg" alt=""> Beatriz Silva Brasil </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/eu.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/9228363203935232" target="_blank"><img src="{{asset("img/lattes.jpg")}}" alt=""> Cireneu Guilherme  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/diego.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/0952425885933900" target="_blank"><img src="img/lattes.jpg" alt=""> Diego Boto </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/luana.maia.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/4489761043243120" target="_blank"><img src="img/lattes.jpg" alt=""> Luana  Maia</a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/marcelino.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/1740880065104701" target="_blank"><img src="img/lattes.jpg" alt="">Lucas Marcelino </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/tiago.b.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/2713545205949439" target="_blank"><img src="img/lattes.jpg" alt=""> Tiago Bezerra  </a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Graduando -->
+
+
+
+    <!--  Modal Tecnicos -->
+
+    <div class="modal fade" id="modalTecnicos" tabindex="-1" role="dialog" aria-labelledby="modalTecnicosTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTecnicosTitulo">Técnicos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <ul class="tab-avatars" data-anime="scroll">
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/cadu.fern.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/3164946646112227" target="_blank"><img src="img/lattes.jpg" alt=""> Carlos Eduardo </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/danuzia.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href="http://lattes.cnpq.br/4810197140557673" target="_blank"><img src="img/lattes.jpg" alt="">Danuzia Inara  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/gondim.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/8632778797741800" target="_blank"><img src="img/lattes.jpg" alt=""> Isaac Gondim  </a></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="figure">
+                                <img src="img/avatars/millena.jpg" class="figure-img img-fluid " >
+                                <figcaption class="figure-caption"><a href=" http://lattes.cnpq.br/6599648936485495" target="_blank"><img src="img/lattes.jpg" alt=""> Millena Maia </a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Tecnicos -->
+
+    <!--  Modal Projetos de Pesquisa -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" role="dialog" aria-labelledby="modalPesquisaTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPesquisaTitulo">Projetos de Pesquisa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <span><strong>2012 - 2015 SENSOR DE ALTA PERFORMANCE EM FIBRAS ÓPTICAS PARA CONTROLE REMOTO DA QUALIDADE DA ÁGUA E DO LEITE</strong></span>
+                    <p>
+                        <strong>Descrição:</strong> Desenvolvimento de Sensor Óptico baseado em fibras e sensores de Bragg para caracterização de leite e água.<br>
+                        <strong>Situação:</strong> Em andamento; Natureza: Pesquisa. <br>
+
+                        <strong>Integrantes: </strong>Glendo de Freitas Guimarães - Integrante / José Wally Mendonça Menezes - Coordenador / Wilton Bezerra de Fragra - Integrante / Fábio Alencar Mendonça - Integrante / Glaucionor Lima de Oliveira - Integrante / Átila Timbó - Integrante.<br>
+                        <strong>Financiador(es):</strong> Financiadora de Estudos e Projetos - Auxílio financeiro / Focus Informática - Auxílio financeiro / Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Auxílio financeiro.
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2011 - 2013 PPP-Programa Primeiros Projetos- Análise numérica da propagação de pulsos ópticos no espaço livre aplicado a óptica integrada</strong></span>
+                    <p>
+                        <strong>Descrição:</strong> Análise numérica da propagação, colisão e estabilização de pulsos ópticos espaço-temporais aplicados a dispositivos de óptica integrada.<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Pesquisa. <br>
+                        <strong>Alunos envolvidos:</strong> Graduação: (1) . <br>
+                        <strong>Integrantes:</strong> Glendo de Freitas Guimarães - Integrante / José Wally Mendonça Menezes - Coordenador / Wilton Bezerra de Fragra - Integrante / Antônio Sérgio Bezerra Sombra - Integrante / Fábio Alencar Mendonça - Integrante / Glaucionor Lima de Oliveira - Integrante.<br>
+                        <strong>Financiador(es):</strong> Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Auxílio financeiro.
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2011 - 2012 Simulação numérica da propagação de pulsos ópticos em fibra óptica utilizando software Matlab.</strong></span>
+                    <p><strong>Descrição:</strong> Nesta pesquisa pretendemos estudar e simular a propagação de Sólitons Ópticos em guias de onda Não-Lineares monomodo, principalmente fibras ópticas utilizando software Matlab. A partir da equação Não-Linear de Schroedinger Generalizada, no regime temporal serão realizadas simulações numéricas para estudar alguns efeitos não lineares e dispersivos que surgem na propagação de sólitons ópticos. Para isso, utilizaremos e compararemos dois esquemas numéricos baseados nos Métodos de Fourier e Elementos Finitos todos escritos na linguagem Matlab.<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Pesquisa. <br>
+                        <strong>Alunos envolvidos:</strong> Graduação: (2) . <br>
+                        <strong>Integrantes:</strong> Glendo de Freitas Guimarães - Integrante / José Wally Mendonça Menezes - Integrante / Wilton Bezerra de Fragra - Integrante / Fábio Alencar Mendonça - Integrante / Glaucionor Lima de Oliveira - Integrante / Mairton Cavalcante Romeu - Coordenador.<br>
+                        <strong>Financiador(es):</strong> Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Bolsa.
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2011 - 2012 Integração de sistemas de telecomunicações rádio Wimax com sistemas de comunicações ópticas usando Matlab.</strong></span>
+                    <p><strong>Descrição: </strong> A tecnologia para redes de altíssima velocidade, baseada em infraestrutura de rádio/rede óptica, vem registrando grande crescimento em sua demanda, por conta da capacidade da fibra óptica para oferta de banda larga e velocidade. Neste sentido o objetivo deste trabalho é estudar e analisar, com auxilio dos software MATLAB e da ferramenta SIMULINK, formas de integração de sistemas de telecomunicações rádio Wimax com sistemas de comunicações ópticas.<br>
+                        <strong>Situação:</strong> Em andamento; Natureza: Pesquisa. <br>
+                        <strong> Alunos envolvidos:</strong> Graduação: (2) . <br>
+                        <strong>Integrantes:</strong> Glendo de Freitas Guimarães - Integrante / José Wally Mendonça Menezes - Coordenador / Wilton Bezerra de Fragra - Integrante / Fábio Alencar Mendonça - Integrante / Glaucionor Lima de Oliveira - Integrante.<br>
+                        <strong>Financiador(es):</strong> Conselho Nacional de Desenvolvimento Científico e Tecnológico - Bolsa.
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2011 - 2012 Estudo analítico-numérico dos amplificadores ópticos em redes de fibras ópticas aplicadas as realidades do Cinturão Digital do Estado do Ceará</strong></span>
+                    <p><strong>Descrição:</strong> O projeto pretende realizar um estudo analítico, discutir,realizar simulações numéricas e desenvolver softwares para simular redes ópticas e o funcionamento de amplificadores ópticos nas redes de fibras ópticas do Cinturão Digital do Estado do Ceará.<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Pesquisa. <br>
+                        <strong>Alunos envolvidos:</strong> Graduação: (2) . <br>
+                        <strong>Integrantes:</strong> Glendo de Freitas Guimarães - Integrante / José Wally Mendonça Menezes - Coordenador / Wilton Bezerra de Fragra - Integrante / Fábio Alencar Mendonça - Integrante / Glaucionor Lima de Oliveira - Integrante.<br>
+                        <strong>Financiador(es):</strong> Conselho Nacional de Desenvolvimento Científico e Tecnológico - Bolsa.
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2010 - 2012 ANÁLISE NUMÉRICA E ESTUDO ANALÍTICO EM REDES DE BRAGG PARA APLICAÇÕES EM SENSORIAMENTO</strong></span>
+                    <p><strong>Descrição:</strong>  Este projeto pretende realizar uma análise numérica, um estudo analítico de redes de Bragg em fibra óptica (FBG) e sua aplicabilidade como elementos sensores. Inicialmente estudaremos e simularemos numericamente o princípio físico de operação dos sensores de Bragg em fibra óptica e posteriormente suas aplicações como elementos sensores. A utilização de fibras ópticas permitem que estes sensores sejam compactos, leves, invioláveis, imunes a interferências eletromagnéticas, o que possibilita sua utilização em ambientes inflamáveis ou hostis como fornos industriais, linhas de transmissão além de permitirem sua utilização no monitoramento de tensões mecânicas.. <br>
+                        <strong>Situação:</strong> Concluído; Natureza: Pesquisa. <br>
+                        <strong>Integrantes:</strong> Glendo de Freitas Guimarães - Coordenador / José Wally Mendonça Menezes - Integrante / Wilton Bezerra de Fragra - Integrante / Antônio Sérgio Bezerra Sombra - Integrante.<br>
+                        <strong>Financiador(es):</strong>Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Auxílio financeiro.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Pesquisa -->
+
+
+    <!--  Modal Projetos de Extensao -->
+
+    <div class="modal fade" id="modalExtensao" tabindex="-1" role="dialog" aria-labelledby="modalExtensaoTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalExtensaoTitulo">Projetos de Extensão</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <span><strong>2014 - 2017 Sistema Remoto de Monitoramento de Pontos Quentes em Conexões Elétricas Utilizando Sensores Ópticos.</strong></span>
+                    <p> <strong>Descrição:</strong> Desenvolvimento de sensores ópticos e estruturação de sistema de monitoramento remoto dos pontos quentes em conexões elétricas. Desenvolvimento de sensores de temperatura utilizando tecnologia óptica. Estruturação de sistema de monitoramento remoto através de software com possibilidade de comunicação com sistema supervisório. Reduzir interrupções do fornecimento devido à degradação total do componente ou rompimento da conexão, reduzindo custos com reparos.. .<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Extensão.  <br>
+                        <strong>Integrantes: </strong>Glendo de Freitas Guimarães - Coordenador.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Extensao -->
+
+
+    <!--  Modal Projetos de Desenvolvimento -->
+
+    <div class="modal fade" id="modalDesenvolvimento" tabindex="-1" role="dialog" aria-labelledby="modalDesenvolvimentoTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDesenvolvimentoTitulo">Projetos de Desenvolvimento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <span><strong>2014 - 2017 Sistema Remoto de Monitoramento de Pontos Quentes em Conexões Elétricas Utilizando Sensores Ópticos.</strong></span>
+                    <p><strong>Descrição:</strong> Desenvolvimento de sensores ópticos e estruturação de sistema de monitoramento remoto dos pontos quentes em conexões elétricas. Desenvolvimento de sensores de temperatura utilizando tecnologia óptica. Estruturação de sistema de monitoramento remoto através de software com possibilidade de comunicação com sistema supervisório. Reduzir interrupções do fornecimento devido à degradação total do componente ou rompimento da conexão, reduzindo custos com reparos.. .<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Extensão.  <br>
+                        <strong>Integrantes: </strong>Glendo de Freitas Guimarães - Coordenador.<br>
+                    </p>
+
+                    <span><strong>2016 - 2016 SMARTHORTA com sensoriamento para cultivo hidropônico</strong></span>
+                    <p>
+                        <strong>Descrição:</strong>O objetivo principal deste projeto é desenvolver a primeira SMARTHORTA brasileira, semi automatizada com sensoriamento completo do cultivo para o uso doméstico no modelo Mínimo Produto Viável. O sistema será consituído de sensores ópticos para medição de parâmetros de qualidade do sistema.. <br>
+                        <strong>Situação:</strong> Concluído; Natureza: Desenvolvimento.  <br>
+                        <strong>Alunos envolvidos:</strong>Graduação: (2).
+                        <strong>Integrantes: </strong> Glendo de Freitas Guimarães - Coordenador / Hilton A Pinho - Integrante / João Isaac. S. MIRANDA - Integrante.<br>
+                    </p>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2015 - 2018 Medidor de Corrente Elétrica Utilizando Fibras Ópticas Dopadas com Nanopartículas Superparamagnéticas.</strong></span>
+                    <p>
+                        <strong>Descrição:</strong> Pretende-se apresentar um protótipo de medidor de corrente elétrica para linhas de baixa e alta tensão utilizando fibras ópticas dopadas com nanopartículas superparamagnéticas.. <br>
+                        <strong>Situação:</strong> Concluído; Natureza: Desenvolvimento.  <br>
+                        <strong>Integrantes: </strong>Glendo de Freitas Guimarães - Coordenador.<br>
+                        <strong>Financiador(es):</strong>Conselho Nacional de Desenvolvimento Científico e Tecnológico - Auxílio financeiro.<br>
+                    </p>
+                    <div class="dropdown-divider"></div>
+
+                    <span><strong>2015 - 2017 Sensor de Corrente Utilizando Fibras Ópticas Dopadas com Nanopartículas Superperparamagnéticas</strong></span>
+                    <p>
+                        <strong>Descrição:</strong>  O projeto visa o desenvolvimento de um equipamento a fim de ser utilizado por um operador em redes elétricas, prezando assim, sua integridade física. Para o sensoriamento pretende-se utilizar fibras ópticas dopadas com nanopartículas superparamagnéticas. Desta forma, através de parâmetros do sinal óptico, quando submetido à campos magnéticos, pode-se mensurar o valor de corrente presente na rede elétrica.<br>
+                        <strong>Situação:</strong> Concluído; Natureza: Desenvolvimento.  <br>
+                        <strong>Integrantes: </strong>Glendo de Freitas Guimarães - Coordenador / Marcus Aurélio Ribeiro Miranda - Integrante / José Marcos Sasaki - Integrante / José Wally Mendonça Menezes - Integrante / Paulo Victor Ferreira Pinto - Integrante / Lucas Pinheiro de Moura - Integrante.<br>
+                        <strong>Financiador(es): </strong>Conselho Nacional de Desenvolvimento Científico e Tecnológico - Bolsa.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Desenvolvimento -->
+
+
+    <!--  Modal de Artigos -->
+
+    <div class="modal fade" id="modalArtigos" tabindex="-1" role="dialog" aria-labelledby="modalArtigosTitulo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalArtigosTitulo">Artigos:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <p><a href="https://link.springer.com/article/10.1007%2Fs11235-018-0423-7" target="_blank">1.
+                        FRAGOSO, K. A. ; FERREIRA, A. C. ; CORREIA, D. G. ; MENDONCA, F. A. ; RODRIGUES, J. J. P. C. ; ALBUQUERQUE, V. H. C. ; GUIMARÃES, G. F. . A novel remote optical coding for PON monitoring systems using fiber bragg grating. TELECOMMUNICATION SYSTEMS, v. -, p. 1-11, 2018.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optlastec.2017.03.012" target="_blank">2.
+                        SALES, J. C. ; Filho, A. F. G. F. ; FERREIRA, A. C. ; SOUSA, J. R. R. ; SARAIVA SOBRINHO, C. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; SOMBRA, A. S. B. . All-optical XOR and OR by Mach-Zehnder Interferometer engineered photonic crystal fibers. OPTICS AND LASER TECHNOLOGY, v. 94, p. 128-137, 2017.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1007/s00542-017-3352-6" target="_blank">
+                        3.
+                        OLIVEIRA, M. V. N. ; COELHO, A. G. ; Sobrinho, C. S. ; FERREIRA, A. C. ; SALES, J. C. ; SOUSA, J. R. R. ; GUIMARÃES, G. F. ; MENEZES, J. W. M. ; LYRA, M. L. ; SOMBRA, A. S. B. . A new modulation method to generate all-optical logic gates in an AOTF. Microsystem Technologies, v. 23, p. 1432-1858, 2017.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1142/S0218863517500229" target="_blank">
+                        4.
+                        PINTO, P. V. F. ; PESSOA, T. M. ; JACINTO, J. M. ; FERREIRA, A. C. ; GUIMARÃES, G. F. . Bistability of ultrashort pulses in FBG under different nonlinearity profiles. JOURNAL OF NONLINEAR OPTICAL PHYSICS & MATERIALS, v. 26, p. 1750022, 2017.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optlastec.2017.07.030" target="_blank">
+                        5.
+                        BEZERRA FILHO, G. S. ; CORREIA, D. G. ; FRAGA, W. B. ; Guimaraes, G. F. . Obtaining optical logic gates - OR, XOR, AND and logic functions using asymmetric Mach-Zehnder interferometer based on photonic crystal fiber. OPTICS AND LASER TECHNOLOGY, v. 97, p. 370-378, 2017.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1364/AO.56.009951" target="_blank">
+                        6.
+                        SILVA, E. B. ; PINTO, P. V. F. ; CHRETIEN, J. B. ; MIRANDA, J. I. S. ; PINHO, H. A. ; TIMBO, A. ; FRAGA, W. B. ; MENEZES, J. W. M. ; SILVA, M. E. ; GUIMARÃES, G. F. . Green optical dissolved oxygen sensor based on a chlorophyll-zinc complex extracted from the plant Brassica oleracea L. APPLIED OPTICS, v. 56, p. 9951-9956, 2017.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optlastec.2015.09.002" target="_blank">
+                        7.
+                        FERREIRA, A. C. ; COELHO JR, A. G. ; SOUSA, J. R. R. ; SARAIVA SOBRINHO, C. ; MAGALHAES, F. T. C. B. ; Filho, A. F. G. F. ; GUIMARÃES, G. F. ; SALES, J. C. ; MENEZES, J. W. M. ; SOMBRA, A. S. B. . PAM-ASK optical logic gates in an optical fiber Sagnac interferometer. Optics and Laser Technology, v. 77, p. 116-125, 2016.
+                        Citações:4|4
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.snb.2015.09.066" target="_blank">
+                        8.
+                        TIMBÓ, ÁTILA PEREIRA ; PINTO, PAULO VICTOR FERREIRA ; PINHO, HILTON ANDRADE ; DE MOURA, LUCAS PINHEIRO ; CHRETIEN, JECOL BAMUTSHA ; VIANA, FLÁVIO WANDERLEY ; FILHO, ROGÉRIO GUERRA DIÓGENES ; DA SILVA, ERANDIR BRASIL ; DA SILVA, MARCOS ERICK RODRIGUES ; MENEZES, JOSÉ WALLY MENDONÇA ; GUIMARÃES, GLENDO DE FREITAS ; FRAGA, WILTON BEZERRA . pH optical sensor based on thin films of sol-gel with bromocresol purple. Sensors and Actuators. B, Chemical, v. 223, p. 406-410, 2016.
+                        Citações:2|9
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/09205071.2016.1257396" target="_blank">
+                        9.
+                        SALES, J. C. ; PESSOA, T. M. ; FERREIRA, A. C. ; CORREIA, D. G. ; Sobrinho, C. S. ; DE ALMEIDA, J. S. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; SOMBRA, A. S. B. . High quality of logic gates from the return arm of a Sagnac fiber interferometer. Journal of Electromagnetic Waves and Applications (Print), v. 30, p. 1-25, 2016.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/09205071.2016.1193451" target="_blank">
+                        10.
+                        MAGALHÃES, F. T. C. B. ; PINHO, H. A. ; CAVALCANTE, D. N. S. ; FERREIRA, A. C. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; FRAGA, W. B. . Unbalance of the Sagnac interferometer through nonlinear asymmetry. Journal of Electromagnetic Waves and Applications (Print), v. 30, p. 1-13, 2016.
+                        Citações:1|1
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/09500340.2015.1080867" target="_blank">
+                        11.
+                        CORREIA, DAYSE GONÇALVES ; ÁVILA, KILVIA MARIA VIANA ; CAVALCANTE, DANIEL DO NASCIMENTO E SÁ ; PINTO, PAULO VICTOR FERREIRA ; MAGALHÃES, FRANCISCO TADEU DE CARVALHO BELCHIO ; MOURA, LUCAS PINHEIRO DE ; FERREIRA, ALISSON DA CONCEIÇÃO ; MENEZES, JOSE WALLY MENDONÇA ; GUIMARÃES, GLENDO DE FREITAS . Non-linear switching based on dual-core non-linear optical fiber couplers with XPM and Raman intrapulse applied to femtosecond pulse propagation. Journal of Modern Optics (Print), v. 63, p. 477-483, 2016.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1142/s0218863515500368" target="_blank">
+                        12.
+                        SALES, J. C. ; Filho, A. F. G. F. ; FERREIRA, A. C. ; SOUSA, J. R. R. ; AVILA, K. M. V. ; CAVALCANTE, D. N. S. ; MAGALHÃES, F. T. C. B. ; Sobrinho, C. S. ; PINTO, P. V. F. ; GUIMARÃES, G. F. ; MENEZES, J. W. M. ; COSTA, D. B. ; SOMBRA, A. S. B. . Mach-Zehnder nonlinear interferometer in photonic crystal fibers with nonlinearity profiles. Journal of Nonlinear Optical Physics and Materials, v. 24, p. 1550036, 2015.
+                        Citações:2|2
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1515/joc-2015-0053" target="_blank">
+                        13.
+                        CORREIA, D. G. ; SALES, J. C. ; PINTO, P. V. F. ; MOURA, L. P. ; FERREIRA, A. C. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; SOMBRA, A. S. B. . Analysis of the Performance of a PAM/PPM/OOK System Operating with OCDMA, under Nonlinear Optical Effects in Optical Fiber Propagation. Journal of Optical Communications, v. 37, p. 233-246, 2015.
+                    </a></p>
+                    <p>
+                        14.
+                        MAGALHAES, F. T. C. B. ; PINTO, P. V. F. ; CORREIA, D. G. ; FERREIRA, A. C. ; MOURA, L. P. ; CAVALCANTE, D. N. E. S. ; PESSOA, T. M. ; Guimaraes, G. F. ; FRAGA, W. B. . Simulação numérica da propagação de um pulso quase-soliton sob a ação de GVD com o método das diferenças finitas. Revista Tecnologia (UNIFOR), v. 35, p. 45-54, 2014.
+                    </p>
+                    <p>
+                        15.
+                        MESQUITA, A. I. S. ; OLIVEIRA, G. S. ; BEZERRA FILHO, G. S. ; ANDRADE, R. C. ; PARENTE, N. N. ; FRAGA, W. B. ; GUIMARÃES, G. F. . Avaliação da Percepção na Utilização de Softwares EducatiVos como Ferramenta no Ensino de Física. Sinergia (IFSP. Online), v. 14, p. 186, 2013.
+                    </p>
+                    <p><a href="http://dx.doi.org/10.4236/jemaa.2013.52008" target="_blank">
+                        16.
+                        GUIMARÃES, GLENDO DE FREITAS; BASTOS, AGLIBERTO MELO ; FERREIRA, ALISSON DA CONCEIÇÃO ; QUEIROZ, ALEX SANDER BARROS ; MENEZES, JOSÉ WALLY MENDONÇA ; SOUSA, JOSÉ RUBENS RODRIGUES ; SOMBRA, ANTONIO SERGIO BEZERRA . Analysis of the Performance of Optical Code-Division Multiple-Access System (OCDMA), Operating with Gold Codes under Nonlinear Effects. Journal of Electromagnetic Analysis and Applications, v. 05, p. 49-57, 2013.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/01468030.2011.568669" target="_blank">
+                        17.
+                        MENEZES, J. W. M. ; FRAGRA, W. B. ; LIMA, F. T. ; GUIMARÃES, G. F. ; FERREIRA, A. C. ; LYRA, M. L. ; SOMBRA, A. S. B. . Study of the Performance of an All-Optical Half-Adder Based on Three-Core Non-Linear Directional Fiber Coupler Under Delayed and Instantaneous Non-Linear Kerr Responses. Fiber and Integrated Optics (Print), v. 30, p. 201-230, 2011.
+                        Citações:3|5
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/01468030.2010.485290" target="_blank">
+                        18.
+                        MENEZES, J. W. M. ; Fraga, W. B. ; FERREIRA, A. C. ; GUIMARÃES, G. F. ; Filho, A. F. G. F. ; Sobrinho, C. S. ; SOMBRA, A. S. B. . All-Optical Half-Adder Using All-Optical XOR and AND Gates for Optical Generation of Sum and Carry . Fiber and Integrated Optics (Print), v. 29, p. 254-271, 2010.
+                        Citações:6|15
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/01468030.2010.485292" target="_blank">
+                        19.
+                        FURTADO FILHO, A. F. G. ; SOUSA, J. R. R. ; GUIMARÃES, G. F. ; ROCHA, H. H. B. ; FERREIRA, A. C. ; LIMA, F. T. ; SOMBRA, A. S. B. . ADD-DROP DEMULTIPLEXER OPERATING IN AN OPTICAL MICHELSON INTERFEROMETER BASED IN FIBER BRAGG GRATINGS FOR TIME DIVISION MULTIPLE ACCESS SYSTEMS. Fiber and Integrated Optics (Print), v. 29, p. 239-253, 2010.
+                        Citações:2|2
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1007/s11082-009-9331-0" target="_blank">
+                        20.
+                        FRAGA, W. B. ; MENEZES, J. W. M. ; Sobrinho, C. S. ; FERREIRA, A. C. ; GUIMARÃES, G. F. ; Lima, A. W. ; Filho, A. F. G. F. ; Rocha, H. H. B. ; Sabóia, K. D. A. ; Lima, F. T. ; SILVA FILHO, J. M. ; SOMBRA, A. S. B. . Numerical analysis of the stability of optical bullets (2 + 1) in a planar waveguide with cubic-quintic nonlinearity. Optical and Quantum Electronics, v. 41, p. 121-130, 2009.
+                        Citações:2|2
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1080/09500340902871371" target="_blank">
+                        21.
+                        FERREIRA, A. C. ; SARAIVA SOBRINHO, C. ; MENEZES, J. W. M. ; FRAGRA, W. B. ; ROCHA, H. H. B. ; SABOIA, K. D. A. ; GUIMARÃES, G. F. ; Filho, J. M. S. ; SOMBRA, A. S. B. ; Lima, A. W. . A performance study of an all-optical logic gate based in PAM-ASK. Journal of Modern Optics (Print), v. 56, p. 1004-1013, 2009.
+                        Citações:10|15
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optcom.2007.10.046" target="_blank">
+                        22.
+                        SARAIVA SOBRINHO, C. ; FERREIRA, A. C. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; FRAGRA, W. B. ; FURTADO FILHO, A. F. G. ; ROCHA, H. H. B. ; MARCIANO, S. P. ; SABOIA, K. D. A. ; SOMBRA, A. S. B. . Analysis of an optical logic gate using a symmetric coupler operating with pulse position modulation (PPM). Optics Communications (Print), v. 281, p. 1056-1064, 2008.
+                        Citações:9|10
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optcom.2008.08.038" target="_blank">
+                        23.
+                        FILHO, J ; MENEZES, J ; GUIMARAES, G ; FERREIRA, A ; DEFRAGA, W ; FILHO, A ; SOMBRA, A . Raman amplification and optical short pulse generation in a waveguide with periodic gain. Optics Communications (Print), v. 281, p. 5804-5810, 2008.
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1007/s11082-008-9239-0" target="_blank">
+                        24.
+                        Filho, A. F. G. F. ; SOUSA, J. R. R. ; LIMA, F. T. ; Fraga, W. B. ; GUIMARÃES, G. F. ; Mendonça, J. W. M. ; SOMBRA, A. S. B. . A performance study of a nonlinear all Fibre Michelson interferometer, add-drop multiplexer, based in Fibre Bragg grating mirrors. Optical and Quantum Electronics, v. 40, p. 525-534, 2008.
+                        Citações:6|7
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.yofte.2007.07.004" target="_blank">
+                        25.
+                        LIMA, J ; SABOIA, K ; SALES, J ; MENEZES, J ; DEFRAGA, W ; GUIMARAES, G ; SOMBRA, A . Optical short pulse switching characteristics of ring resonators. Optical Fiber Technology (Print), v. 14, p. 79-83, 2008.
+                        Citações:5|6
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optcom.2007.03.071" target="_blank">
+                        26.
+                        MENEZES, J. W. M. ; FRAGRA, W. B. ; GUIMARÃES, G. F. ; FERREIRA, A. C. ; ROCHA, H. H. B. ; SILVA, M. G. ; SOMBRA, A. S. B. . Optical switches and all-fiber logical devices based on triangular and planar three-core nonlinear optical fiber couplers. Optics Communications (Print), v. 276, p. 107-115, 2007.
+                        Citações:21|33
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1016/j.optcom.2007.03.058" target="_blank">
+                        27.
+                        SARAIVA SOBRINHO, C. ; RIOS, C. S. N. ; MARCIANO, S. P. ; GUIMARÃES, G. F. ; SALES, J. C. ; SABOIA, K. D. A. ; ROCHA, H. H. B. ; SOMBRA, A. S. B. . A performance study of a logical gate using PPM optical pulse modulation for TDM systems. Optics Communications (Print), v. 275, p. 476-485, 2007.
+                        Citações:2|4
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1007/s11082-008-9186-9" target="_blank">
+                        28.
+                        MENEZES, J. W. M. ; Fraga, W. B. ; FERREIRA, A. C. ; SABOIA, K. D. A. ; Filho, A. F. G. F. ; GUIMARÃES, G. F. ; SOUSA, J. R. R. ; ROCHA, H. H. B. ; SOMBRA, A. S. B. . Logic gates based in two- and three-modes nonlinear optical fiber couplers. Optical and Quantum Electronics, v. 39, p. 1191-1206, 2007.
+                        Citações:22|29
+                    </a></p>
+                    <p><a href="http://dx.doi.org/10.1049/el:20062001" target="_blank">
+                        29.
+                        GUIMARÃES, G. F.; LUTHI, S. R. ; FREITAS, J. F. L. ; GOMES, A. S. L. . TDFA/FOPA hybrid for broadband amplification and frequency conversion in optical communications. Electronics Letters, v. 42, p. 997, 2006.
+                        Citações:1|2
+                    </a></p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal Artigos  -->
+
+    <header class="menu">
+        <div id='loader'><div class="preloader"><div class="loaded">&nbsp;</div></div></div>
+        <a class="logo" href="/"><img src="img/fotonica.png" style="width: 200px; height: 50px" alt="Fotonica"></a>
+        <span class="mobile-btn"></span>
+        <nav class="menu-nav mobile-menu " id="navbarSupportedContent">
+            <ul>
+                <li ><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a  href="#integrantes">Integrantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section class="container-fluid " style="margin-top: 35px">
+        <div  class="row  bg-dark text-white">
+
+            <div class="col-lg-7 p-0">
+                <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li  data-slide-to="0" class="active"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"  src="img/slide/1.jpeg"  alt="">
+                            <div class="carousel-caption">
+                                <h4 class="display-4">Tecnologia</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"  src="img/slide/2.png" alt="">
+                            <div class="carousel-caption">
+                                <h4 class="display-4">Ensino</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"  src="img/slide/4.jpg"  alt="">
+                            <div class="carousel-caption">
+                                <h4 class="display-4">Trabalho em Equipe</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 p-4 align-self-center">
+                <h2 class="display-7">Laboratório de Pesquisa e Desenvolvimento em Comunicações e Sensoriamento Óptico.</h2>
+                <!-- <h4 class="lead">Contate-nos e saiba mais sobre nosso trabalho.</h4>
+                 <form action="">
+                     <div class="input-group input-group-lg">
+                         <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                         <span class="input-group-btn">
+                     <button class="btn btn-primary" type="button">Enviar</button>
+                   </span>
+                     </div>
+                 </form>-->
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="container animais" data-group="1" id="sobre">
+
+        <h1 data-anime="scroll">Sobre Nós</h1>
+
+        <ul class="tab-menu" data-anime="scroll">
+            <li><a href="#inicio" data-click="inicio">Início</a></li>
+            <li><a href="#inovacao" data-click="inovacao">Inovação</a></li>
+            <li><a href="#wolf" data-click="wolf">Parcerias</a></li>
+        </ul>
+
+        <div class="item" id="inicio" data-target="inicio">
+            <div class="item-img">
+                <img src="img/foto.png"  style="border:solid 1px #a7aaa7" alt="Fox">
+            </div>
+            <div class="item-info">
+                <h3>Fundação</h3>
+                <br><br>
+                <p> "O Fotônica, Laboratório de Pesquisa e Desenvolvimento em Comunicações e Sensoriamento Óptico, foi fundado no início de 2013 com o intuito de fomentar a pesquisa básica e aplica em óptica integada.</p>
+            </div>
+        </div>
+
+        <div class="item" id="inovacao" data-target="inovacao">
+            <div class="item-img">
+                <img src="img/mesa.jpeg" style="border:solid 1px #a7aaa7" alt="Mesa">
+            </div>
+            <div class="item-info">
+                <h3>Características</h3>
+                <br><br>
+                <p>Além de trabalhos que simulam sistemas e dispositivos ópticos por meio de métodos numéricos e softwares específicos, atualmente são desenvolvidos vários projetos de P&D em parceria com empresas e instituições de fomento, os quais buscam melhorar, aplicando a óptica em outras áreas do conhecimento, o desempenho e a precisão em sensores, medidores e outros equipamentos. "</p>
+            </div>
+        </div>
+
+        <div class="item" id="wolf" data-target="wolf">
+            <div class="item-img">
+                <img src="img/confra.jpg" style="border:solid 1px #a7aaa7" alt="Confraternização">
+            </div>
+            <div class="item-info">
+                <h3>Vínculos</h3>
+                <br><br>
+                <p>Vinculado ao Programa de Pós-Graduação em Engenharia de Telecomunicações (PPGET) é composto por uma equipe multidisciplinar, composta de estudantes de nível técnico, graduação, mestrado, doutorado, pós doutorado e professores. Os projetos desenvolvidos no laboratório possibilitaram, até o momento, o depósito de 11 patentes, a publicação em 12 períodicos internacionais e 25 artigos em eventos.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <style>
+        #home-quote {
+            background: url('img/bg-quote.jpg') center center;
+        background-size: cover;
+        }
+    </style>
+    <section id="home-quote" class="p-md-5">
+        <blockquote class="blockquote text-center text-white p-md-5 p-3">
+            <h2 class="display-4" data-anime="scroll" ><em>"Nada é tão maravilhoso que não possa existir, se admitido pelas leis da Natureza."</em></h2>
+            <footer class="blockquote-footer text-white">Michael Faraday</footer>
+        </blockquote>
+    </section>
+
+    <script>
+        function parallax() {
+            //declarando a variavel
+            var layer = document.getElementById('layer');
+            ///aplicando a posição
+            //layer.style.top = -(window.pageYOffset / 3) + 'px';
+        }
+        window.addEventListener("scroll", parallax, false);
+
+
+    </script>
+
+    <section class="planodefundo" data-group="florestas" id="projetos">
+        <div class="container">
+            <h1 data-anime="scroll" style="color: #ffffff;">Projetos</h1>
+
+            <ul class="tab-menu" data-anime="scroll">
+                <li><a href="#modalPesquisa" data-toggle="modal"  style="color: #ffffff; border-color: #c20d22;">Projetos de Pesquisa</a></li>
+                <li><a href="#modalExtensao" data-toggle="modal" style="color: #ffffff; border-color: #c20d22;">Projetos de Extensão</a></li>
+                <li><a href="#modalDesenvolvimento" data-toggle="modal"  style="color: #ffffff; border-color: #c20d22;">Projetos de Desenvolvimento</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="container montanhas" data-group="montanhas" id="artigos">
+
+        <h1 data-anime="scroll">Artigos</h1>
+        <div class="container">
+            <p><a href="https://link.springer.com/article/10.1007%2Fs11235-018-0423-7" target="_blank">1.
+                FRAGOSO, K. A. ; FERREIRA, A. C. ; CORREIA, D. G. ; MENDONCA, F. A. ; RODRIGUES, J. J. P. C. ; ALBUQUERQUE, V. H. C. ; GUIMARÃES, G. F. . A novel remote optical coding for PON monitoring systems using fiber bragg grating. TELECOMMUNICATION SYSTEMS, v. -, p. 1-11, 2018.
+            </a></p>
+            <p><a href="http://dx.doi.org/10.1016/j.optlastec.2017.03.012" target="_blank">2.
+                SALES, J. C. ; Filho, A. F. G. F. ; FERREIRA, A. C. ; SOUSA, J. R. R. ; SARAIVA SOBRINHO, C. ; MENEZES, J. W. M. ; GUIMARÃES, G. F. ; SOMBRA, A. S. B. . All-optical XOR and OR by Mach-Zehnder Interferometer engineered photonic crystal fibers. OPTICS AND LASER TECHNOLOGY, v. 94, p. 128-137, 2017.
+            </a></p>
+            <p><a href="http://dx.doi.org/10.1007/s00542-017-3352-6" target="_blank">
+                3.
+                OLIVEIRA, M. V. N. ; COELHO, A. G. ; Sobrinho, C. S. ; FERREIRA, A. C. ; SALES, J. C. ; SOUSA, J. R. R. ; GUIMARÃES, G. F. ; MENEZES, J. W. M. ; LYRA, M. L. ; SOMBRA, A. S. B. . A new modulation method to generate all-optical logic gates in an AOTF. Microsystem Technologies, v. 23, p. 1432-1858, 2017.
+            </a></p>
+            <p><a href="http://dx.doi.org/10.1142/S0218863517500229" target="_blank">
+                4.
+                PINTO, P. V. F. ; PESSOA, T. M. ; JACINTO, J. M. ; FERREIRA, A. C. ; GUIMARÃES, G. F. . Bistability of ultrashort pulses in FBG under different nonlinearity profiles. JOURNAL OF NONLINEAR OPTICAL PHYSICS & MATERIALS, v. 26, p. 1750022, 2017.
+            </a></p>
+            <p><a href="http://dx.doi.org/10.1016/j.optlastec.2017.07.030" target="_blank">
+                5.
+                BEZERRA FILHO, G. S. ; CORREIA, D. G. ; FRAGA, W. B. ; Guimaraes, G. F. . Obtaining optical logic gates - OR, XOR, AND and logic functions using asymmetric Mach-Zehnder interferometer based on photonic crystal fiber. OPTICS AND LASER TECHNOLOGY, v. 97, p. 370-378, 2017.
+            </a></p>
+            <p><a href="http://dx.doi.org/10.1364/AO.56.009951" target="_blank">
+                6.
+                SILVA, E. B. ; PINTO, P. V. F. ; CHRETIEN, J. B. ; MIRANDA, J. I. S. ; PINHO, H. A. ; TIMBO, A. ; FRAGA, W. B. ; MENEZES, J. W. M. ; SILVA, M. E. ; GUIMARÃES, G. F. . Green optical dissolved oxygen sensor based on a chlorophyll-zinc complex extracted from the plant Brassica oleracea L. APPLIED OPTICS, v. 56, p. 9951-9956, 2017.
+            </a></p>
+
+            <div class="text-center my-4">
+                <a class="btn btn-primary btn-lg" href="#modalArtigos" data-toggle="modal">Ver mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center" data-group="1" id="integrantes">
+        <div >
+            <div class="my-5">
+                <h1 data-anime="scroll">Nossa Equipe</h1>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6">
+                    <div style="height: 100px;" class="d-flex justify-content-center">
+                        <a class="nav-link" href="#modalDoutores" data-toggle="modal" > <h1 style="font-size: 80px;" data-anime="scroll">9</h1></a>
+                    </div>
+                    <h3>Doutores</h3>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <div style="height: 100px;" class="d-flex justify-content-center">
+                        <a class="nav-link" href="#modalDoutorandos" data-toggle="modal"  ><h1 style="font-size: 80px;"  data-anime="scroll">4</h1></a>
+                    </div>
+                    <h3>Doutorandos</h3>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <a class="nav-link" href="#modalMestres" data-toggle="modal"  >
+                        <div style="height: 100px;" class="d-flex justify-content-center">
+                            <h1 style="font-size: 80px;"  data-anime="scroll">4</h1>
+                        </div>
+                    </a>
+                    <h3><a href="">Mestres</a></h3>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <a class="nav-link" href="#modalMestrandos" data-toggle="modal"  >
+                        <div style="height: 100px;" class="d-flex justify-content-center">
+                            <h1 style="font-size: 80px;"  data-anime="scroll">7</h1>
+                        </div>
+                    </a>
+                    <h3>Mestrandos</h3>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <a class="nav-link" href="#modalGraduandos" data-toggle="modal"  >
+                        <div style="height: 100px;" class="d-flex justify-content-center">
+                            <h1 style="font-size: 80px;"  data-anime="scroll">12</h1>
+                        </div>
+                    </a>
+                    <h3>Graduandos</h3>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <a class="nav-link" href="#modalTecnicos" data-toggle="modal"  >
+                        <div style="height: 100px;" class="d-flex justify-content-center">
+                            <h1 style="font-size: 80px;"  data-anime="scroll">4</h1>
+                        </div>
+                    </a>
+                    <h3>Técnicos</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <h4 class="h6">PÁGINAS</h4>
+                    <ul class="list-unstyled">
+                        <li ><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#artigos">Artigos</a></li>
+                        <li><a  href="#integrantes">Integrantes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h4 class="h6">ENDEREÇO</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.google.com.br/maps/place/IFCE+-+Campus+de+Fortaleza/@-3.7443907,-38.5383125,17z/data=!3m1!4b1!4m5!3m4!1s0x7c7491a5cfc50e5:0x35b7fad8eb59ba84!8m2!3d-3.7443907!4d-38.5361238" target="_blank">Av. Treze de Maio, 2081 - Benfica, Fortaleza - CE, 60040-531</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h6">DADOS DE CONTATO</h4>
+                    <ul class="list-unstyled text-secondary">
+                        <li>contato@fotonica.ifce.edu.br</li>
+                        <li>(85) 3307-3681</li>
+                        <li>De Seg. à Sex. das 8h às 22h</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="h6">REDES SOCIAIS</h4>
+                    <ul class="list-unstyled">
+                        <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="https://www.facebook.com/fotonicaifce/?ref=br_rs" style="max-width: 140px" target="_blank">Facebook</a></li>
+                        <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="https://www.instagram.com/fotonica_ifce/?hl=pt-br" style="max-width: 140px" target="_blank">Instagram</a></li>
+                        <li class="btn btn-outline-secondary btn-sm btn-block mb-2"	style="max-width: 140px">Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-center py-3">
+            <p class="mb-0">Fotônica © 2018. Alguns direitos reservados.</p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        // Este evendo é acionado após o carregamento da página
+        jQuery(window).load(function() {
+            //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+            jQuery("#loader").delay(2000).fadeOut("slow");
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/app2.js"></script>
+
+
+    </body>
+    </html>
